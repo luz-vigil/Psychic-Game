@@ -6,15 +6,53 @@
 </head>
 
 <body>
+    
     <div class="jumbotron">
         <h1>The Psychic Game</h1>
     </div>
 
     <div>
-        <p id=guessInput>Guess what letter I'm thinking of></p>
+        <p id=guessInput>Guess what letter I'm thinking of</p>
         <p id=wins>Wins:</p>
         <p id=losses>Losses:</p>
         <p id=guessesLeft>Guesses Left:</p>
-        <p id=guessesSoFar>Your Guesses so far:</p>
+        <p id=userGuess>Your Guesses so far:</p>
     </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+    }
+    
+    var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var letter = computerGuess
+    computerLetter = random
+    var wins = 0
+    var losses = 0
+    var guessesLeft = 9
+    var userGuess = [];
+    var guess
+    
+    for (var i = 0; i < 8; i++) {
+        userGuess = prompt("What's your guess?");
+        userGuess.push(guess);
+        wins function() {
+            if (userGuess ==computerLetter){
+                wins++
+            }
+        };
+        losses function() {
+            if (guessesLeft === 0){
+                losses++
+            }
+        };
+        guessesLeft function() {
+            if (userGuess != computerLetter){
+                guessesLeft--
+            }
+        };
+        userGuess function() {
+            print userGuess
+        }
+      }
+    </script>
 </body>
