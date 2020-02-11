@@ -12,11 +12,11 @@
     </div>
 
     <div>
-        <p id=guessInput>Guess what letter I'm thinking of</p>
-        <p id=wins>Wins:</p>
-        <p id=losses>Losses:</p>
-        <p id=guessesLeft>Guesses Left:</p>
-        <p id=userGuess>Your Guesses so far:</p>
+        <p id="directions-text"></p>
+        <p id="wins-text"></p>
+        <p id="losses-text"></p>
+        <p id="guessesLeft-text"></p>
+        <p id="userGuess-text"></p>
     </div>
     <script type="text/javascript">
     $(document).ready(function() {
@@ -32,6 +32,13 @@
     var userGuess = []
     var guess
     
+    var directionsText = document.getElementById("directions-text");
+    var userGuessText = document.getElementById("userGuess-text");
+    var guessesLeftText = document.getElementById("guessesLeft-text");
+    var winsText = document.getElementById("wins-text");
+    var lossesText = document.getElementById("losses-text");
+
+
     document.onkeyup = function(event) {
         var isInvalidLetter = alphabet.indexOf(letter) === -1
         
@@ -53,7 +60,14 @@
                 guessesLeft--
             };
             
-            document.write.userGuess
+            document.write.userGuess;
+
+            directionsText.textContent ="Guess what letter I'm thinking of";
+            winsText.textContent = "Wins:" + wins;
+            lossesText.textContent = "Losses" + losses;
+            guessesLeftText.textContent = "Guesses left:" + guessesLeft;
+            userGuessText.textContent = "Your guesses so far:" + userGuess;
+
         }
     }
     
