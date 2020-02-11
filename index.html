@@ -21,38 +21,44 @@
     <script type="text/javascript">
     $(document).ready(function() {
 
-    }
+    })
     
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var letter = computerGuess
+    var letter = event.key
     computerLetter = random
     var wins = 0
     var losses = 0
     var guessesLeft = 9
-    var userGuess = [];
+    var userGuess = []
     var guess
     
-    for (var i = 0; i < 8; i++) {
-        userGuess = prompt("What's your guess?");
-        userGuess.push(guess);
-        wins function() {
-            if (userGuess ==computerLetter){
+    document.onkeyup = function() {
+        var isInvalidLetter = alphabet.indexOf(letter) === -1
+        
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        for (var i = 0; i < 8; i++) {
+            userGuess = prompt("What's your guess?");
+            userGuess.push(guess);
+            wins function() {
+                if (userGuess ==computerLetter){
                 wins++
-            }
-        };
-        losses function() {
-            if (guessesLeft === 0){
+                }
+            };
+            losses function() {
+                if (guessesLeft === 0){
                 losses++
-            }
-        };
-        guessesLeft function() {
-            if (userGuess != computerLetter){
+                }
+            };
+            guessesLeft function() {
+                if (userGuess != computerLetter){
                 guessesLeft--
+                }
+            };
+            userGuess function() {
+                document.write.userGuess
             }
-        };
-        userGuess function() {
-            print userGuess
         }
-      }
+    }
+    
     </script>
 </body>
