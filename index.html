@@ -32,31 +32,28 @@
     var userGuess = []
     var guess
     
-    document.onkeyup = function() {
+    document.onkeyup = function(event) {
         var isInvalidLetter = alphabet.indexOf(letter) === -1
         
-        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        var computerGuess = letters[Math.floor(Math.random() * letters.length)];
+        
         for (var i = 0; i < 8; i++) {
             userGuess = prompt("What's your guess?");
             userGuess.push(guess);
-            wins function() {
-                if (userGuess ==computerLetter){
+            
+            if (userGuess ==computerLetter){
                 wins++
-                }
             };
-            losses function() {
-                if (guessesLeft === 0){
+            
+            if (guessesLeft === 0){
                 losses++
-                }
             };
-            guessesLeft function() {
-                if (userGuess != computerLetter){
+             
+            if (userGuess != computerLetter){
                 guessesLeft--
-                }
             };
-            userGuess function() {
-                document.write.userGuess
-            }
+            
+            document.write.userGuess
         }
     }
     
